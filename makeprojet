@@ -1,0 +1,16 @@
+projet:	projetc.o	fonction1.o	fonction2.o fonction3.o	couleursTerminal.o	fonction4.o
+	gcc projetc.o fonction1.o fonction2.o fonction3.o fonction4.o couleursTerminal.o -o projet
+
+projetc.o:	projetc.c	projetc.h
+	gcc -c projetc.c
+
+fonction1.o:	fonction1.c	projetc.h	couleursTerminal.h
+	gcc -c fonction1.c
+fonction2.o:	fonction2.c	projetc.h	couleursTerminal.h
+	gcc -c fonction2.c
+fonction3.o:	fonction3.c	projetc.h	couleursTerminal.h
+	gcc -c fonction3.c
+fonction4.o:	fonction4.c	projetc.h	couleursTerminal.h
+	gcc -c fonction4.c
+couleursTerminal.o:	couleursTerminal.c	couleursTerminal.h
+	gcc -c couleursTerminal.c
